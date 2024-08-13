@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    background-color: #001227;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    display: none; 
+    z-index: 10; 
+}
+
+nav.open ~ .overlay {
+    display: block;
+}
+
+header{
+    background-color: #001227;
+    width: 100%;
+    padding: 1.5em;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width:60px; 
+    height:30px
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav{
+    top: 0;
+    height: 100%;
+    position: absolute;
+    right: -100%;
+    z-index: 9998;
+    width: 50vw;
+    transition: right 0.4s ease;
+}
+
+nav.open{
+    right: 0;
+    top: 0;
+    height: 100%;
+    position: fixed;
+    display: block;
+    z-index: 9999;
+    background-color: #001227;
+    width: 60vw;
+}
+
+nav > ion-icon{
+    font-size: 2em;
+    padding: 1em;
+}
+
+nav ul{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 2em;
+}
+
+nav ul li{
+    margin: 2.5em;
+}
+
+nav > ul > li > a{
+    text-decoration: none;
+    color: #fff;
+    transition: all .5s ease;
+    font-size: 1.3em;
+}
+
+nav ul li a:hover{
+    font-size: 1.5em;
+}
+
+nav > ul > li > button{
+    border: none;
+    background-color: #FBA86C ;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow .5s ease;
+}
+
+nav > ul > li > button > a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+nav ul li button:hover{
+    box-shadow: 0 0 20px #d88249;
+}
+
+.menu-mobile ion-icon{
+    font-size: 2.5em;
+}
+
+/* Estilo com imagem fundo */
+
+#hero{
+    position: relative;
+    background-color: #001227;
+    background: url('../imagens/solar.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.conteudo {
+    position: relative;
+    z-index: 2;
+    padding: 0 8%;
+    text-align: center;
+}
+
+.conteudo h1{
+    text-align: center;
+}
+
+.descricao{
+    text-align: center;
+    margin-top: 1em;
+}
+
+.descricao button{
+    border: 2px solid #fff;
+    padding: 10px 30px;
+    font-size: 1em;
+    background-color: inherit;
+    border-radius: 15px;
+    color: #fff;
+    margin-top: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.descricao button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* conteudo do card branco */
+
+#about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about > .conteudo{
+    background-color: #fff;
+    box-shadow: 0 1px 3px black;
+    border-radius: 20px;
+    margin-top: -1.5em;
+    z-index: 5;
+    width: 80%;
+    height: 50vh;
+    padding: 30px;
+}
+
+#about > .conteudo h2{
+    font-size: 1.9em;
+}
+
+/* serviços */
+
+#servicos{
+    margin-top: 3em;
+    color: #fff;
+}
+
+#servicos > .conteudo{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+}
+
+#servicos > .conteudo h2, .service h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#servicos ion-icon{
+    font-weight: 700;
+    font-size: 1.8em;
+    color: #ffff00;
+}
+
+.conteudo-servicos{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.titulo p, .service p{
+    padding: 2% 8%;
+}
+
+.service{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.service:hover{
+    box-shadow: 0 0 5px white;
+}
