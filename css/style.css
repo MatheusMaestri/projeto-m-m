@@ -200,7 +200,7 @@ nav ul li button:hover{
     margin-top: -1.5em;
     z-index: 5;
     width: 80%;
-    height: 50vh;
+    height: 100%;
     padding: 30px;
 }
 
@@ -233,7 +233,7 @@ nav ul li button:hover{
 #servicos ion-icon{
     font-weight: 700;
     font-size: 1.8em;
-    color: #ffff00;
+    color: #ff9900;
 }
 
 .conteudo-servicos{
