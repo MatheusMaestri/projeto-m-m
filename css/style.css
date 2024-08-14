@@ -11,6 +11,8 @@ html{
     background-color: #001227;
     overflow-x: hidden;
     touch-action: pan-y;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10em;
 }
 
 .overlay {
@@ -213,6 +215,7 @@ nav ul li button:hover{
 #servicos{
     margin-top: 3em;
     color: #fff;
+    display: flex;
 }
 
 #servicos > .conteudo{
@@ -227,13 +230,13 @@ nav ul li button:hover{
 #servicos > .conteudo h2, .service h3{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 1em;
 }
 
 #servicos ion-icon{
-    font-weight: 700;
     font-size: 1.8em;
-    color: #ff9900;
+    color: #FBA86C;
 }
 
 .conteudo-servicos{
@@ -250,10 +253,149 @@ nav ul li button:hover{
     width: 100%;
     padding: 10px;
     border-radius: 10px;
-    transition: all .5s;
+    transition: all .5s ease;
     cursor: pointer;
 }
 
 .service:hover{
-    box-shadow: 0 0 5px white;
+    box-shadow: 0 0 5px #FBA86C;
+}
+
+#contador{
+    color: #fff;
+    margin: 7em 0;
+    
+}
+
+#contador > h1{
+    text-align: center;
+    margin: 1.5em;
+    font-size: 2.5em;
+}
+
+#contador .projetos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+    width: 100%;
+    border-radius: 20px 0;
+    padding: 10px;
+    font-size: 1.3em;
+    box-shadow: 0 0 15px .5px rgba(255, 255, 255, 0.24);
+}
+
+#contador .projetos > h1{
+    color: #FBA86C;
+}
+
+/* projetos */
+
+.titulo-projeto{
+    margin-top: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    gap: 1em;
+    margin: 2em 2em 15em 2em;
+}
+
+.project {
+    flex: 1;
+    overflow: hidden;
+    transition: flex 0.5s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.project-header {
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.project-content {
+    padding: 20px;
+    display: none;
+    background-color: #222;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    max-height: 0;
+    overflow: hidden;
+    flex: 1;
+}
+
+.project.active {
+    flex: 3;
+}
+
+.project.active .project-content {
+    display: block;
+    max-height: 1000px;
+    opacity: 1;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+
+/* FOOTER */
+
+footer{
+
+    margin-top: 5em;
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 1px #fba76c5d;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 2px solid #FBA86C;
+}
+
+footer .line-footer p ion-icon{
+    color: #FBA86C;
+    font-size: 25px;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #FBA86C;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.btn-social button ion-icon{
+    align-items: center;
+    padding-top: 5px;
+    font-size: 2.5em;
+    color: #000;
 }

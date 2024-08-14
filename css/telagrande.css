@@ -1,5 +1,7 @@
 @media (min-width: 1366px){
-    .menu-mobile, nav > ion-icon{
+    .menu-mobile, 
+    nav > ion-icon, 
+    nav > ul > li > img{
         display: none;
     }
 
@@ -74,6 +76,11 @@
     }
 
     /* serviços */
+
+    #servicos{
+        height: 70vh;
+        color: #fff;
+    }
     
     #servicos > .conteudo{
         display: flex;
@@ -99,6 +106,10 @@
         width: 40%;
     }
 
+    .service h3{
+        font-size: 1.5em;
+    }
+
     .conteudo-servicos{
         width: 100%;
         display: flex;
@@ -107,12 +118,54 @@
         justify-content: space-between;
     }
     
-    .titulo p, .service p{
-        text-align: start;
-    }
-    
     .service{
         padding: 20px;
+    }
+
+    /* CONTADOR ANIMADO */
+    
+    #contador .projetos{
+        align-items: center;
+        width: 20%;
+    }
+
+    #contador > .conteudo{
+        justify-content: center;
+    }
+
+    /* projetos */
+
+    .titulo-projeto{
+        margin-top: 15em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+    }
+
+    .projects {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 2em 2em 20em 2em;
+    }
+
+    .project {
+        margin-bottom: 20px;
+    }
+
+    .project-content {
+        max-height: none; 
+        position: relative; 
+        opacity: 1;
+    }
+
+    .project.active {
+        flex: 1; 
+    }
+
+    .project.active .project-content {
+        max-height: none; 
     }
 
 }
