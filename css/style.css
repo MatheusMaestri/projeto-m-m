@@ -86,11 +86,10 @@ nav ul{
     display: flex;
     align-items: center;
     list-style: none;
-    padding: 2em;
 }
 
 nav ul li{
-    margin: 2.5em;
+    margin: 2em;
 }
 
 nav > ul > li > a{
