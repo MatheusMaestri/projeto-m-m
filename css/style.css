@@ -43,6 +43,7 @@ header{
     font-size: 1.5em;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .logo img{
@@ -130,6 +131,58 @@ nav ul li button:hover{
     font-size: 2.5em;
 }
 
+/* PRE LOADING */
+
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: spinz 1.35s linear infinite;
+    width: 100%;
+    height: 100%;
+    background-color: #001227;
+    z-index: 10000;
+}
+
+.loader{
+    border: 16px solid #da8f5e;
+    border-top: 16px solid #001227;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1.35s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+    75% {
+        transform: rotate(260deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes spinz{
+    0%{
+        opacity: 1;
+    }
+}
+
 /* Estilo com imagem fundo */
 
 #hero{
@@ -137,8 +190,9 @@ nav ul li button:hover{
     background-color: #001227;
     background: url('../imagens/solar.jpg') no-repeat center center;
     background-size: cover;
+    background-attachment: fixed;
     color: #fff;
-    height: 70vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     align-items: center;

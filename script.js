@@ -68,3 +68,14 @@ document.querySelectorAll('.card').forEach(card => {
         }
     });
 });
+
+// LOADING
+
+let elemPreloader = document.getElementById("preloader")
+let elemLoader = document.getElementById("loader")
+console.log("ok")
+
+setTimeout(() => {
+    elemPreloader.classList.remove("preloader")
+    elemLoader.classList.remove("loader")
+}, 1200)
