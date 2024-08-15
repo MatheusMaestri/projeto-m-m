@@ -1,3 +1,5 @@
+// MENU MOBILE
+
 document.addEventListener('DOMContentLoaded', () => {
     const menuMobile = document.querySelector('.menu-mobile');
     const nav = document.querySelector('nav');
@@ -55,22 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// CARDS
 
-document.addEventListener('DOMContentLoaded', () => {
-    const projects = document.querySelectorAll('.project');
-
-    projects.forEach(project => {
-        project.addEventListener('click', () => {
-            // Alternar o projeto clicado
-            project.classList.toggle('active');
-            const content = project.querySelector('.project-content');
-            if (project.classList.contains('active')) {
-                content.style.maxHeight = content.scrollHeight + 'px';
-            } else {
-                content.style.maxHeight = '0';
-            }
-        });
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', function() {
+        if (this.classList.contains('clicked')) {
+            this.classList.remove('clicked');
+        } else {
+            this.classList.add('clicked');
+        }
     });
 });
-
-

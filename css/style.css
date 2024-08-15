@@ -33,8 +33,10 @@ nav.open ~ .overlay {
 header{
     background-color: #001227;
     width: 100%;
-    padding: 1.5em;
+    padding: .8em;
     color: white;
+    position: fixed;
+    z-index: 9999;
 }
 
 .logo {
@@ -207,6 +209,20 @@ nav ul li button:hover{
 
 #about > .conteudo h2{
     font-size: 1.9em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+.rede-social > a{
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.rede-social ion-icon{
+    color: #1e3b87;
+    padding-left: .5em;
 }
 
 /* serviços */
@@ -262,14 +278,24 @@ nav ul li button:hover{
 
 #contador{
     color: #fff;
-    margin: 7em 0;
-    
+    margin: 10em 0 0 0;
 }
 
 #contador > h1{
     text-align: center;
     margin: 1.5em;
     font-size: 2.5em;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#contador > h1::before, .titulo-projeto > h2::before{
+    content: '';
+    position: absolute;
+    background-color: #FBA86C;
+    width: 70%;
+    height: 2px;
 }
 
 #contador .projetos{
@@ -292,76 +318,83 @@ nav ul li button:hover{
 /* projetos */
 
 .titulo-projeto{
-    margin-top: 10em;
+    margin: 10em 0 2em;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
+    font-size: 1.5em;
 }
 
-.projects {
+.titulo-projeto > h2 {
+    flex-direction: column-reverse;
+    display: flex;
+    align-items: center;
+}
+
+.cards-projetos{
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    position: relative;
-    gap: 1em;
-    margin: 2em 2em 15em 2em;
+    align-items: center;
+    gap: 2em;
 }
 
-.project {
-    flex: 1;
+.swiper {
+    width: 400px;
+    height: auto;
+}
+
+.swiper .sliderText{
+    background-color: #1e3b87;
+}
+
+.card {
+    position: relative;
+    background-color: #da8f5e;
+    color: #333;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    transition: background-color 0.3s ease, color 0.3s ease; 
     overflow: hidden;
-    transition: flex 0.5s ease;
     cursor: pointer;
-    position: relative;
 }
 
-.project-header {
-    padding: 20px;
-    border-radius: 10px 10px 0 0;
-    background-color: #333;
-    color: #fff;
+
+.card .content{
+    width: auto;
     text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
-.project-content {
-    padding: 20px;
-    display: none;
-    background-color: #222;
-    color: #fff;
+.sliderText {
     position: relative;
     width: 100%;
-    z-index: 1;
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-    max-height: 0;
-    overflow: hidden;
-    flex: 1;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 80px;
 }
 
-.project.active {
-    flex: 3;
+.sliderText h3{
+    color: #fff;
+    font-size: 2em;
 }
 
-.project.active .project-content {
-    display: block;
-    max-height: 1000px;
-    opacity: 1;
-}
-
-.project img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 10px;
+.content img{
+    margin-top: 1em;
+    border-radius: 20px 0;
+    width: 100%;
 }
 
 
 /* FOOTER */
 
 footer{
-
     margin-top: 5em;
-    padding: 40px 4%;
+    padding: 20px 4% 0 4%;
     box-shadow: 0 0 40px 1px #fba76c5d;
 }
 
@@ -397,4 +430,15 @@ footer .line-footer p ion-icon{
     padding-top: 5px;
     font-size: 2.5em;
     color: #000;
+}
+
+.interface a{
+    text-decoration: none;
+    color: #da8f5e;
+}
+
+.direitos {
+    color: #fff;
+    text-align: center;
+    margin-top: 2em;
 }

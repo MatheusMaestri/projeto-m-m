@@ -67,6 +67,11 @@
         padding: 10px;
         height: 40vh;
     }
+
+    .rede-social > a{
+        text-decoration: none;
+        font-size: 1.2em;
+    }
     
     #about > .conteudo h2{
         font-size: 2.5em;
@@ -124,6 +129,14 @@
 
     /* CONTADOR ANIMADO */
     
+    #contador{
+        margin: 7em 0 0 0;
+    }
+
+    #contador > h1::before, .titulo-projeto > h2::before{
+        width: 20%;
+    }
+
     #contador .projetos{
         align-items: center;
         width: 20%;
@@ -135,37 +148,68 @@
 
     /* projetos */
 
-    .titulo-projeto{
-        margin-top: 15em;
+     .titulo-projeto{
+        margin-top: 8em;
+        font-size: 1.8em;
         display: flex;
         align-items: center;
         justify-content: center;
         color: #fff;
     }
 
-    .projects {
+    /* card projetos */
+
+    .cards-projetos{
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 2em 2em 20em 2em;
+        align-items: center;
+        justify-content: center;
+        gap: 3em;
+        margin-bottom: 20em;
     }
 
-    .project {
-        margin-bottom: 20px;
+    .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: opacity 0.3s ease; 
+        opacity: 1; 
+        pointer-events: none;
+        z-index: 8;
+    }
+    
+    .card:hover::before {
+        opacity: 0; 
+    }
+    
+    .card.clicked::before {
+        opacity: 0;
+    }
+    
+    .swiper {
+        width: 500px;
+        height: auto;
+    }
+    
+    
+    .card .content{
+        width: auto;
+        text-align: center;
+        padding: 30px;
+        box-sizing: border-box;
     }
 
-    .project-content {
-        max-height: none; 
-        position: relative; 
-        opacity: 1;
+    
+    .content img{
+        margin-top: 1em;
+        border-radius: 20px 0;
+        width: 100%;
     }
 
-    .project.active {
-        flex: 1; 
-    }
-
-    .project.active .project-content {
-        max-height: none; 
-    }
 
 }
