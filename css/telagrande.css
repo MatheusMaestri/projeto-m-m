@@ -41,6 +41,10 @@
 
     /* conteudo com imagem */
 
+    #hero{
+        height: 80vh;
+    }
+
     .conteudo {
         padding: 0;
         display: flex;

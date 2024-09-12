@@ -15,6 +15,7 @@ html{
     scroll-padding-top: 10em;
 }
 
+
 .overlay {
     position: fixed;
     top: 0;
@@ -44,6 +45,11 @@ header{
     display: flex;
     align-items: center;
     cursor: pointer;
+}
+
+.logo a{
+    text-decoration: none;
+    color: #fff;
 }
 
 .logo img{
@@ -187,12 +193,12 @@ nav ul li button:hover{
 
 #hero{
     position: relative;
-    background-color: #001227;
+    background-color: #cedff3;
     background: url('../imagens/solar.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     color: #fff;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -242,6 +248,11 @@ nav ul li button:hover{
     background-color: rgba(255, 255, 255, 0.15);
 }
 
+.descricao button a{
+    text-decoration: none;
+    color: #fff;
+}
+
 /* conteudo do card branco */
 
 #about{
@@ -254,7 +265,7 @@ nav ul li button:hover{
     background-color: #fff;
     box-shadow: 0 1px 3px black;
     border-radius: 20px;
-    margin-top: -1.5em;
+    margin-top: -3.5em;
     z-index: 5;
     width: 80%;
     height: 100%;
@@ -266,6 +277,13 @@ nav ul li button:hover{
     display: flex;
     flex-direction: column;
     gap: 1em;
+    align-items: center;
+}
+
+.esquerdo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -443,6 +461,15 @@ nav ul li button:hover{
     margin-top: 1em;
     border-radius: 20px 0;
     width: 100%;
+}
+
+.content p {
+    font-weight: 600;
+}
+
+.content p span, .descricao p > span{
+    color: #1e3b87;
+    font-weight: 700;
 }
 
 
